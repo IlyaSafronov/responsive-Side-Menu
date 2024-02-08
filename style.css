@@ -38,18 +38,22 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  height: var(--header-heigh);
+  height: var(--header-height);
   background-color: #f3f3f3;
+  padding-left:calc(var(--nav-width) + 1rem);
 }
 
+
+
 header #nav-toggle {
+  font-size: 1.5rem;
   box-shadow: 0 0 1px #343434;
   background-color: #fff;
   padding: 0.25rem 0.35rem;
   border-radius: 0.25rem;
 }
 
-/* ! side menu styles  */
+/* ! Side menu styles  */
 nav {
   display: flex;
   flex-direction: column;
@@ -63,8 +67,41 @@ nav {
 }
 
 nav .logo {
-  height: var(--header-height);
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: var(--header-height);
+}
+
+nav .logo span {
+  margin-left: 1rem;
+}
+
+.nav__item-link,
+.logo,
+.sign-out {
+  font-size: 1.25rem;
+  display: block;
+  padding: 1rem;
+  color: #f3f3f3;
+  white-space: nowrap;
+}
+
+.nav__item-link span,
+.logo span,
+.sign-out span {
+  margin-left: 0.5rem;
+}
+
+/* ! js classes */
+.collapse {
+  width: var(--nav-collapse-width);
+}
+
+.collapse i {
+  margin-left: 0.5rem;
+}
+
+.collapse span {
+  display: none;
 }
