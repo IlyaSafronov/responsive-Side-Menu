@@ -40,12 +40,13 @@ header {
   padding: 0 1rem;
   height: var(--header-height);
   background-color: #f3f3f3;
-  padding-left:calc(var(--nav-width) + 1rem);
+  padding-left: calc(var(--nav-width) + 1rem);
+  transition: padding-left 0.3s ease-in-out;
 }
 
 
 
-header #nav-toggle {
+header #nav-toggler {
   font-size: 1.5rem;
   box-shadow: 0 0 1px #343434;
   background-color: #fff;
@@ -64,6 +65,7 @@ nav {
   height: 100%;
   background-color: var(--nav-bg-color);
   width: var(--nav-width);
+  transition: width 0.2s ease-in-out;
 }
 
 nav .logo {
@@ -104,4 +106,30 @@ nav .logo span {
 
 .collapse span {
   display: none;
+}
+
+.collapse-header {
+  padding-left: calc(var(--nav-collapse-width) + 1rem) ;
+}
+
+.active {
+  color: var(--active-color);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ! media mobile */
+@media screen and (max-width: 768px) {
+  header {
+    padding-left: 1rem;
+  }
+  nav {
+    width: 0px;
+    overflow: hidden;
+  }
+  .nav__item-link span,
+  .logo span,
+  .sign-out span {
+    display: none;
+  }
+  
 }
